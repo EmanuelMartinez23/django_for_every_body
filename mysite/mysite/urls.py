@@ -8,9 +8,6 @@ from django.shortcuts import render
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
-# Vista para la raíz
-def home(request):
-    return render(request, 'home.html')  # Asegúrate de que esta plantilla exista
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -19,6 +16,5 @@ urlpatterns = [
         {'document_root': SITE_ROOT, 'show_indexes': True},
         name='site_path'
     ),
-    path('', home, name='home'),  # Ruta para la URL raíz
 ]
 
