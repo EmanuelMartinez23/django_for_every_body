@@ -12,6 +12,7 @@ class IndexView(generic.ListView):
         """ return the lasta five published questions. """
         return Question.objects.order_by("-pub_date")[:5]
 
+
 class DetailView(generic.DetailView):
     model = Question
     template_name = "polls/detail.html"
@@ -20,6 +21,7 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = "polls/results.html"
+
 
 def vote(request, question_id):
 
