@@ -1,8 +1,8 @@
 from django.urls import include, path
-from .views import cookie
+from .views import cookie, sessfun
 
 
 urlpatterns = [
-        path('',cookie),
+        path('',sessfun),
 
         ]
