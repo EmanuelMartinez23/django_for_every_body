@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'cats.apps.CatsConfig',
     'hello.apps.HelloConfig',
     'home.apps.HomeConfig',
     'autos.apps.AutosConfig',
