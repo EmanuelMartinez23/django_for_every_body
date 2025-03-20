@@ -20,6 +20,8 @@
             {% csrf_token %}
             {{ form|crispy }}
             <label for="{{ form.price.id_for_label }}">price:</label>
+            <label for="{{ form.title.id_for_label }}">title:</label>
+            <label for="{{ form.text.id_for_label }}">text:</label>
 {{ form.price }}
 
             <button type="submit" class="btn btn-primary">Submit</button>
