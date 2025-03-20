@@ -15,6 +15,6 @@
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
     <a href="{% url 'ads:ad_detail' 12 %}">Selling: Home Theater System with Surround Sound</a>
-    <label for="{{ form.price.id_for_label }}">precio:</label>
+    <label for="{{ form.price.id_for_label }}">price:</label>
 {{ form.price }}
 {% endblock %}
