@@ -1,0 +1,14 @@
+{% extends 'base_menu.html' %}
+{% block content %}
+    <br>
+    <h1> {{ ad.title }}</h1>
+    <p><b>Price:</b> {{ ad.price }}</p>
+    <p><b>Text:</b> {{ ad.text }}</p>
+    {% if ad.owner == user %}
+          | <a href="{% url 'ads:ad_update' ad.id %}">Editar</a>
+          | <a href="{% url 'ads:ad_delete' ad.id %}">Eliminar</a>
+    {% endif %}
+    <br>
+    <a href="{% url 'ads:all' %}">All ads</a>
+
+{% endblock %}
