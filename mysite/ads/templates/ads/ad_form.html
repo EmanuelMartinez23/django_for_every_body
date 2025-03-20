@@ -8,6 +8,11 @@
             <label for="{{ form.price.id_for_label }}">price:</label>
 {{ form.price }}
 
+            <label for="{{ form.title.id_for_label }}">title:</label>
+{{ form.title }}
+            <label for="{{ form.text.id_for_label }}">text:</label>
+{{ form.text }}
+
             <button type="submit" class="btn btn-primary">Submit</button>
             <input type="submit" value="Cancel" class="btn btn-danger" onclick="window.location.href='{% url 'ads:all' %}'; return false;">
         </form>
