@@ -5,7 +5,7 @@
         <form action="" method="post">
             {% csrf_token %}
             {{ form|crispy }}
-            <label for="{{ form.price.id_for_label }}">precio:</label>
+            <label for="{{ form.price.id_for_label }}">price:</label>
 {{ form.price }}
 
             <button type="submit" class="btn btn-primary">Submit</button>

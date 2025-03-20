@@ -16,7 +16,15 @@
 </form>
     <a href="{% url 'ads:ad_detail' 12 %}">Selling: Home Theater System with Surround Sound</a>
     <label for="{{ form.price.id_for_label }}">price:</label>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                   <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <label for="{{ form.price.id_for_label }}">price:</label>
+{{ form.price }}
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Cancel" class="btn btn-danger" onclick="window.location.href='{% url 'ads:all' %}'; return false;">
+        </form>
 
 {{ form.price }}
 {% endblock %}
