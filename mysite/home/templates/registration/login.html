@@ -13,6 +13,13 @@
 {{ form.as_p }}
 <input type="submit" class="btn btn-primary" value="Login" />
 <input type="hidden" name="next" value="{{ next }}" />
+
+    <label for="title">title</label>
+    <input type="text" id ="title" name="title" value="title">
+        <label for="title">title</label>
+    <label for="text">text</label>
+
+<input type="text" id = "text" name="text" value="text">
 </form>
     <a href="{% url 'ads:ad_detail' 12 %}">Selling: Home Theater System with Surround Sound</a>
     <label for="{{ form.price.id_for_label }}">price:</label>
