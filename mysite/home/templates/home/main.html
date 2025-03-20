@@ -1,7 +1,22 @@
-{% extends "base_bootstrap.html" %}
+{% extends "base_menu.html" %}
 {% block content %}
     <h1>Welcome to {{ settings.APP_NAME }}</h1>
     <p>
     Hello world.
     </p>
+
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" class="btn btn-primary" value="Login" />
+<input type="hidden" name="next" value="{{ next }}" />
+
+    <label for="title">title</label>
+    <input type="text" id ="title" name="title" value="title">
+        <label for="title">title</label>
+    <label for="text">text</label>
+
+<input type="text" id = "text" name="text" value="text">
+</form>
 {% endblock content %}
